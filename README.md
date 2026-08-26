@@ -5,7 +5,7 @@
 ![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=Cloudflare&logoColor=white)
 ![Jellyfin](https://img.shields.io/badge/Jellyfin-000B25?style=for-the-badge&logo=Jellyfin&logoColor=00A4DC)
 
-Bem-vindo ao repositório de infraestrutura (*Infrastructure as Code*) do meu servidor doméstico. Este repositório armazena as receitas (`docker-compose.yml`) de todos os serviços que rodam no meu homelab, gerenciado através do **CasaOS** no **Ubuntu Server**.
+Repositório de infraestrutura do meu servidor doméstico. Este repositório armazena as receitas (`docker-compose.yml`) de todos os serviços que rodam no meu homelab, gerenciado através do **CasaOS** no **Ubuntu Server**.
 
 ## 🚀 Serviços Hospedados
 
