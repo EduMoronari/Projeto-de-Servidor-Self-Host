@@ -19,10 +19,13 @@ A stack principal é voltada para a automação de mídia (The "Arr" Stack), com
 
 ## 🛡️ Segurança e Acesso Remoto
 
+### "Funcionalidades de segurança e conexão remota ficam a mercer do usuário implementar, uso de domínio próprio é recomendado"
+
 Nenhuma porta do servidor é exposta diretamente à internet. O acesso externo aos painéis de gerência e aos serviços é feito através do **Cloudflare Zero Trust (Tunnels)**:
 *   Acesso web restrito via autenticação OTP (One-Time PIN) por e-mail.
 *   Túneis HTTP diretos para os containers.
 *   Acesso SSH remoto via Cloudflare Tunnels e Termius.
+  
 
 ## 📂 Estrutura do Repositório
 
