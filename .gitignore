@@ -1,0 +1,9 @@
+# Ignorar arquivos de variáveis de ambiente (senhas/tokens)
+.env
+*.env
+
+# Ignorar pastas de dados reais caso você arraste para cá no futuro
+AppData/
+dados/
+config/
+*.db
