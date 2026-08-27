@@ -7,6 +7,26 @@
 
 Repositório de infraestrutura do meu servidor doméstico. Este repositório armazena as receitas (`docker-compose.yml`) de todos os serviços que rodam no meu homelab, gerenciado através do **CasaOS** no **Ubuntu Server**.
 
+## ⚙️ Instalação Automatizada (setup.sh)
+
+Agora o repositório conta com um script de instalação automatizada (`setup.sh`) que realiza todo o processo de formatação e configuração inicial do servidor. 
+
+**O que o script faz:**
+1. Instala as dependências necessárias.
+2. Instala automaticamente o CasaOS.
+3. Cria a estrutura de pastas principal no disco (ex: `/DATA/AppData`, `/DATA/Media`).
+4. **Importação de Configurações:** Se você tiver um backup dos seus dados (pasta `AppData`), basta colocá-la na mesma pasta do script que ele irá migrar os arquivos e ajustar as permissões necessárias.
+5. **Leitura Dinâmica:** Ele lê **todas as pastas** deste repositório que possuam um arquivo `docker-compose.yml` e as instala/inicia automaticamente no Docker, integrando os apps perfeitamente ao dashboard do CasaOS.
+
+**Como utilizar:**
+1. Baixe este repositório para o seu servidor.
+2. *(Opcional)* Coloque sua pasta `AppData` de backup junto com os arquivos.
+3. Dê permissão e execute:
+```bash
+chmod +x setup.sh
+sudo ./setup.sh
+```
+
 ## 🚀 Serviços Hospedados
 
 A stack principal é voltada para a automação de mídia (The "Arr" Stack), com regras customizadas para priorizar conteúdo localizado e qualidade de vídeo:
@@ -29,7 +49,7 @@ Nenhuma porta do servidor é exposta diretamente à internet. O acesso externo a
 
 ## 📂 Estrutura do Repositório
 
-Cada serviço possui sua própria pasta contendo o arquivo `docker-compose.yml` correspondente.
+Cada serviço possui sua própria pasta contendo o arquivo `docker-compose.yml` correspondente. O script `.sh` automatiza todo o provisionamento.
 
 ```text
 📦 Projeto-de-Servidor-Self-Host
@@ -43,6 +63,7 @@ Cada serviço possui sua própria pasta contendo o arquivo `docker-compose.yml` 
 ┃ ┗ 📜 docker-compose.yml
 ┣ 📂 jellyfin/
 ┃ ┗ 📜 docker-compose.yml
+┣ 📜 setup.sh
 ┗ 📜 README.md
 ```
 
